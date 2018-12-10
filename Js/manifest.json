@@ -1,0 +1,8 @@
+{
+    "name": "Codingt",
+    "short_name": "Codingt",
+    "permissions": ["notifications","gcm"],
+    "display": "standalone",
+    "gcm_sender_id": "703280822050",
+    "gcm_user_visible_only": true
+}
