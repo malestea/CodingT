@@ -1,7 +1,7 @@
 {
   "name": "Digw",
   "short_name": "Digw",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "https://digw.xyz/?m=1",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#2B0C93",
