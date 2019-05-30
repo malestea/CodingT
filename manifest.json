@@ -1,0 +1,38 @@
+{
+  "name": "Digw",
+  "short_name": "Digw",
+  "start_url": "https://www.digw.xyz/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#2B0C93",
+  "description": "Membagikan berbagai hal yang sekiranya bermanfaat...",
+  "icons": [{
+    "src": "https://3.bp.blogspot.com/-kEOhM-wY5XA/XO9JmqVeGCI/AAAAAAAAB4Y/5cmVziuEolo2fgVlGXun5B4Eek9UOm-_QCLcBGAs/s48/logo.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-TKtsocoMbtE/XO9Jt9EPkfI/AAAAAAAAB4c/q1sO1rhI2pkLwGxV2T9G_8vNDHMMSGHjACLcBGAs/s72/logo.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-Klned88_O0I/XO9J0pR7tWI/AAAAAAAAB4g/lg7TQSNkuj4LCoMR4-QzHcOzLXhWx_wgwCLcBGAs/s96/logo.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-uToLqBfvWyc/XO9J8moPfMI/AAAAAAAAB4k/mev1Lzpnrqsq1_etb2oJ0YqqomJxY9mkgCLcBGAs/s144/logo.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-o2jbHlxH-pk/XO9KClSTXGI/AAAAAAAAB4s/devhakkPW8Ymh3-ZdiL8HSzoBQXDRI7EwCLcBGAs/s168/logo.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-Yphp-uox8X0/XO9KI_-8eiI/AAAAAAAAB40/08h17eMkLggGg-qam8NKY8T_SPi1vfi_ACLcBGAs/s192/logo.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-h8gSTKOt4q8/XO9KPeJdl_I/AAAAAAAAB48/irecU7Z3H7IzauWKET357GypyyQ_ndP9QCLcBGAs/s512/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
