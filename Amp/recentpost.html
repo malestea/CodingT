@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+<title>Recent Post</title>
+<style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;}
+a,img{transition:all .4s ease-in-out}
+#recentpostnav{border:1px solid #585858;width:100%;margin:0 auto}
+#recentpost{margin:0;background:#fff;}
+.recentpostel{background:#fff;display:block;border-bottom:1px solid #ddd;margin:0 0 20px;padding:0 0 10px;height:72px}
+.recentpostel:last-child{margin:0;border-bottom:none;}
+.recentpostel img{background:#fff;padding:0;float:left;height:72px;margin-right:8px;width:72px;display:block;}
+.recentpostel h6,.recentpostel h6 a{text-decoration:none;font-size:16px;font-weight:700;line-height:1.2;margin:0;color:#555}
+.recentpostel h6 a:hover{color:#777}
+.recentpostel img:hover{opacity:.6}
+</style>
+
+</head>
+
+<body>
+<div class="box" id="box">
+<div id="recentpost"></div>
+<div id="recentpostnavfeed"></div>
+</div>
+<script>
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+  function generateCss(q) {
+    var css       = document.createElement('style'),
+        sp2       = document.getElementById('box'),
+        parentDiv = sp2.parentNode;
+    css.type = 'text/css';
+    if (css.styleSheet) css.styleSheet.cssText = q;
+    else css.appendChild(document.createTextNode(q));
+    parentDiv.insertBefore(css, sp2);
+  }
+    (function() {
+    var q = '.recentpostel h6 a {font-size:' + getQueryVariable('fontSize') + ';color:#' + getQueryVariable('color') + '}';
+        generateCss(q);
+  })();
+  </script>
+<script>
+var urlblog = getQueryVariable("url");
+function bloggerfeed(e,t){for(var n=e.split("<"),r=0;r<n.length;r++)-1!=n[r].indexOf(">")&&(n[r]=n[r].substring(n[r].indexOf(">")+1,n[r].length));return n=n.join(""),n=n.substring(0,t-1)}function showrecentpost(e){var t,n,r,a,i,s="";urlprevious="",urlnext="";for(var l=0;l<e.feed.link.length;l++)"previous"==e.feed.link[l].rel&&(urlprevious=e.feed.link[l].href),"next"==e.feed.link[l].rel&&(urlnext=e.feed.link[l].href);for(var d=0;d<5&&d!=e.feed.entry.length;d++){t=e.feed.entry[d],n=t.title.$t;for(var l=0;l<t.link.length;l++)if("alternate"==t.link[l].rel){r=t.link[l].href;break}i="content"in t?t.content.$t:"summary"in t?t.summary.$t:"",a="media$thumbnail"in t?t.media$thumbnail.url:"https://3.bp.blogspot.com/-BHuXHny1kOk/VXrkSyxKCjI/AAAAAAAACas/pZLJAEUDtds/s72/no-image.png",s+="<div class='recentpostel'>",s+="<a href='"+r+"' target='_blank' title='"+n+"'><img alt='"+n+"' width='72' src='"+a+"' height='72' title='"+n+"'/></a>",s+="<h6><a href='"+r+"' target='_blank' title='"+n+"'>"+n+"</a></h6>",s+="</div>"}document.getElementById("recentpost").innerHTML=s,s="",document.getElementById("recentpostnavfeed").innerHTML=s}function navigasifeed(e){var t,n;-1==e?(t=urlprevious.indexOf("?"),n=urlprevious.substring(t)):1==e?(t=urlnext.indexOf("?"),n=urlnext.substring(t)):n="?start-index=1&max-results=5&orderby=published&alt=json-in-script",n+="&callback=showrecentpost",incluirscript(n)}function incluirscript(e){1==0&&removerscript(),document.getElementById("recentpost").innerHTML="<div id='recentpostload'></div>",document.getElementById("recentpostnavfeed").innerHTML="";var t=urlblog+"/feeds/posts/default"+e,n=document.createElement("script");n.setAttribute("type","text/javascript"),n.setAttribute("src",t),n.setAttribute("id","postlabel"),document.getElementsByTagName("head")[0].appendChild(n),startfeed=1}function removerscript(){var e=document.getElementById("postlabel"),t=e.parentNode;t.removeChild(e)}onload=function(){navigasifeed(0)};
+</script>
+</body>
+</html>
