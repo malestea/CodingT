@@ -127,6 +127,7 @@ var labelArray = [],
 var randomRelatedIndex, showRelatedPost;
 (function (n, m, k) {
     var d = {
+        widgetTitle: "<h4>You Might Also Like:</h4>",
         widgetStyle: 1,
         homePage: "https://kentangtechno.blogspot.com/",
         numPosts: 7,
@@ -174,7 +175,7 @@ var randomRelatedIndex, showRelatedPost;
             var s = document.getElementById(d.containerId),
                 x = l(z.feed.entry),
                 A = d.widgetStyle,
-                c = '<ul>',
+                c = d.widgetTitle + '<ul class="related-post-style-' + A + '">',
                 b = d.newTabLink ? ' target="_blank"' : "",
                 v, t, w, r, u;
             if (!s) {
@@ -192,16 +193,16 @@ var randomRelatedIndex, showRelatedPost;
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
                 if (A == 2) {
-                    c += '<li><div class="thumb"><a href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" src="' + r + '"></a></div><a title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><span><span>' + u + '</span> <a href="' + v + '"' + b + ">" + d.moreText + "</a></span></li>"
+                    c += '<li><div class="thumb"><a href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" src="' + r + '"></a></div><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><span><span>' + u + '</span> <a href="' + v + '" class="related-post-item-more"' + b + ">" + d.moreText + "</a></span></li>"
                 } else {
                     if (A == 3 || A == 4) {
                         c += '<li><div class="thumb"><a href="' + v + '"' + b + ' target="_blank"><img alt="" src="' + r + '"></a></div><div class="reltitle"><a class="reljudul" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a></div></li>"
                     } else {
                         if (A == 5) {
-                            c += '<li><a href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" src="' + r + '"><span>' + w + "</span></a></li>"
+                            c += '<li><a class="related-post-item-wrapper" href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" src="' + r + '"><span class="related-post-item-tooltip">' + w + "</span></a></li>"
                         } else {
                             if (A == 6) {
-                                c += '<li><a title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><div><img alt="" src="' + r + '"><span><span>' + u + "</span></span></div></li>"
+                                c += '<li><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><div class="related-post-item-tooltip"><img alt="" src="' + r + '"><span><span>' + u + "</span></span></div></li>"
                             } else {
                                 c += '<li><a title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a></li>"
                             }
