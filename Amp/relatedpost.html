@@ -24,27 +24,108 @@ a {
   text-decoration:none;
 }
 a:hover {color:#0379C4}
-/* Related Post Blog */
-#oploverz{display:block;margin:20px 0;line-height:1.5em;}#oploverz h3.title{font-size:16px;font-weight:600;text-align:center;text-transform:uppercase;line-height:initial;margin:40px;}#oploverz h3.title span{background-color:#fff;padding:10px 20px;position:relative;border:3px solid #666;border-radius:50px;transition:all .3s;cursor:pointer;}#oploverz h3.title span:hover{background:#91d1ff;color:#fff;border:3px solid #91d1ff;}#oploverz ul{margin:20px 0 0;padding:0;display:flex;display:-webkit-flex;flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;}#oploverz ul li{list-style:none;width:calc((100% / 4) - 7.5px);text-align:center;margin-right:10px;margin-bottom:20px;padding:0;-webkit-margin-start:0!important;}#oploverz ul li .thumb{overflow:hidden;line-height:0;}#oploverz ul li:nth-of-type(4n){margin-right:0;}#oploverz ul li a{display:block;}#oploverz ul li a.judul{color:#666;font-weight:600;position:relative;padding:14px;}#oploverz ul li a img{width:100%;vertical-align:middle;}#oploverz ul li,#oploverz ul li{line-height:1.6;transition:.3s;border-radius:4px;}#oploverz ul li:hover,#oploverz ul li:hover{box-shadow:0 8px 24px 0 rgba(0,0,0,0.1);transform:translateY(-14px);}#oploverz .norelated{text-align:center;font-weight:600;}@media screen and (max-width:480px){#oploverz ul li{width:calc((100% / 2) - 7.5px);margin-right:15px;margin-bottom:15px;}#oploverz ul li:nth-of-type(4n){margin-right:15px;}#oploverz ul li:nth-of-type(2n){margin-right:0;}}
+/* ==== Related Post Widget Start ==== */
+.related-post {
+  margin:20px auto 0;
+  font-family: Roboto, sans-serif;
+  font-size:16px;
+}
+.related-post h4 {
+  font-size:20px;
+  margin:0 0 10px;
+  font-weight:500;
+}
+/* Style 3 */
+.related-post h4{margin:20px 10px 0!important;background:0 0;font-size:30px;font-weight:500;padding:0;color:#141924}
+.related-post{margin:0 0 0 -4px;padding:0;font-size:13px;text-align:left;box-sizing:border-box}
+.related-post,.related-post-style-3 .related-post-item{-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+h4.title-related{font-size:24px;font-weight:500;margin:10px 0;text-align:left;z-index:2;color:#141924}
+.related-post-style-3,.related-post-style-3 li{margin:0!important;padding:0!important;list-style:none;word-wrap:break-word;overflow:hidden}
+.related-post-style-3 .related-post-item{display:block;float:left;width:25%;height:155px;padding-left:4px!important;margin:0 0 4px!important;box-sizing:border-box}
+.related-post-style-3 .related-post-item-thumbnail{display:block;margin:0 0 10px;width:100%;height:90px;max-width:none;max-height:none;background-color:transparent;padding:0;}
+.related-post-style-3 .related-post-item-tooltip{padding:0 7px;overflow:hidden;text-overflow:ellipsis;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.related-post-style-3 .related-post-item-tooltip a.related-post-item-title{font-size:13px;font-weight:700;color:#666666!important;}
+.related-post-style-3 .related-post-item-tooltip a.related-post-item-title:hover{text-decoration:underline}
+@media screen and (max-width:1024px){
+.related-post{margin:0 0 0 -2px;}
+.related-post-style-3 .related-post-item{height:123px;padding-left:2px!important;margin:0 0 2px!important;}
+.related-post-style-3 .related-post-item-thumbnail{height:67px;}
+.related-post-style-3 .related-post-item-tooltip a.related-post-item-title{font-size:12px;}
+}
+@media screen and (max-width:800px){
+#related-post{margin:0 0 0 -4px;display:block}
+.related-post-style-3 .related-post-item{height:160px;padding-left:4px!important;margin:0 0 4px!important;}
+.related-post-style-3 .related-post-item-thumbnail{height:93px;}
+.related-post-style-3 .related-post-item-tooltip a.related-post-item-title{font-size:13px;}
+}
+@media screen and (max-width:603px){
+.related-post{margin:0 0 0 -2px;}
+.related-post-style-3 .related-post-item{height:123px;padding-left:2px!important;margin:0 0 2px!important;}
+.related-post-style-3 .related-post-item-thumbnail{height:67px;}
+.related-post-style-3 .related-post-item-tooltip a.related-post-item-title{font-size:12px;}
+}
+@media screen and (max-width:375px){
+.related-post-style-3 .related-post-item{width:100%;height:auto;margin: 0 0 20px!important;}
+.related-post-style-3 .related-post-item-thumbnail{height:250px}}	
+@media screen and (max-width:320px){.related-post-style-3 .related-post-item-summary {display:none;}
+}
+/* ==== Related Post Widget End ==== */
 </style>
 </head>
 <body>
 
-    <div id='oploverz'>
-        <h3 class='title'><span>Artikel Lain</span></h3>
-        <script>//<![CDATA[
-          var jumlah = 8;
-    eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('q o=["\\D","\\E\\1b\\t\\w\\u","\\t\\r\\z\\K\\u\\L","\\F","\\w\\z\\H\\r\\1J\\1c\\S","\\E\\I\\V\\E\\u\\y\\w\\z\\K","","\\1h\\M\\w\\z","\\r\\z\\u\\y\\1u","\\S\\r\\r\\H","\\1v\\u","\\u\\w\\u\\t\\r","\\W\\M\\z\\u\\r\\z\\u","\\E\\I\\G\\G\\v\\y\\1u","\\G\\r\\H\\w\\v\\1v\\u\\L\\I\\G\\V\\z\\v\\w\\t","\\I\\y\\t","\\H\\v\\u\\v\\1K\\w\\G\\v\\K\\r\\N\\1b\\z\\K\\1L\\V\\v\\E\\r\\1w\\1x\\1M\\w\\1i\\1y\\1c\\1z\\1j\\1N\\1O\\1P\\K\\M\\p\\p\\p\\p\\1A\\1k\\1d\\L\\X\\1d\\K\\p\\p\\p\\p\\X\\p\\p\\p\\p\\1y\\T\\p\\1l\\p\\p\\p\\T\\Y\\H\\1e\\1Q\\r\\p\\p\\p\\p\\p\\1B\\1A\\T\\1k\\1i\\Y\\1l\\T\\p\\1h\\V\\1x\\1d\\N\\K\\p\\p\\p\\p\\1R\\X\\t\\X\\Y\\1i\\Y\\1l\\G\\1S\\1c\\M\\y\\1w\\1T\\1U\\p\\p\\1C\\1V\\p\\1W\\1X\\1m\\1c\\1D\\1E\\1F\\p\\p\\p\\p\\p\\X\\t\\1D\\1F\\1n\\1k\\I\\Y\\G\\T\\T","\\t\\w\\z\\1n","\\y\\r\\t","\\v\\t\\u\\r\\y\\z\\v\\u\\r","\\L\\y\\r\\S","\\y\\v\\z\\H\\M\\G","\\S\\t\\M\\M\\y","\\1d\\1z\\1C","\\D\\t\\w\\F","\\D\\H\\w\\1m\\O\\W\\t\\v\\E\\E\\P\\A\\u\\L\\I\\G\\V\\A\\F\\D\\v\\O\\L\\y\\r\\S\\P\\A","\\A\\O\\u\\w\\u\\t\\r\\P\\A","\\A\\F\\D\\w\\G\\K\\O\\E\\y\\W\\P\\A","\\N\\1j\\1e\\1Y\\1e\\Z\\L\\1e\\1E\\1B\\Z\\1b\\Z\\1n\\Z\\z\\M\\Z\\z\\I","\\y\\r\\1b\\t\\v\\W\\r","\\A\\O\\v\\t\\u\\P\\A","\\A\\N\\F\\D\\N\\v\\F\\D\\N\\H\\w\\1m\\F","\\D\\v\\O\\L\\y\\r\\S\\P\\A","\\A\\O\\W\\t\\v\\E\\E\\P\\A\\1h\\I\\H\\I\\t\\A\\F","\\D\\N\\v\\F","\\D\\N\\t\\w\\F","\\1j\\y\\w\\u\\r"];q 1a=0,x=Q R(),B=Q R(),J=Q R();1f 1Z(a,b){q c=a[o[1]](o[0]);U(q d=0;d<c[o[2]];d++){C(c[d][o[4]](o[3])!=-1){c[d]=c[d][o[5]](c[d][o[4]](o[3])+1,c[d][o[2]])}};c=c[o[7]](o[6]);c=c[o[5]](0,b-1);1o c}1f 2a(a){U(q b=0;b<a[o[9]][o[8]][o[2]];b++){q c=a[o[9]][o[8]][b];x[1a]=c[o[11]][o[10]];1p=o[6];C(o[12]1q c){1p=c[o[12]][o[10]]}1r{C(o[13]1q c){1p=c[o[13]][o[10]]}};C(o[14]1q c){1s=c[o[14]][o[15]]}1r{1s=o[16]};J[1a]=1s;U(q d=0;d<c[o[17]][o[2]];d++){C(c[o[17]][d][o[18]]==o[19]){B[1a]=c[o[17]][d][o[20]];1t}};1a++}}1f 1G(a,b){U(q c=0;c<a[o[2]];c++){C(a[c]==b){1o 2b}};1o 2c}1f 2d(){q a=Q R(0);q b=Q R(0);q c=Q R(0);q d=Q R(0);U(q e=0;e<B[o[2]];e++){C(!1G(a,B[e])){a[o[2]]+=1;a[a[o[2]]-1]=B[e];b[o[2]]+=1;b[b[o[2]]-1]=x[e];c[o[2]]+=1;d[o[2]]+=1;d[d[o[2]]-1]=J[e]}};x=b;B=a;J=d;U(q e=0;e<x[o[2]];e++){q f=1g[o[22]]((x[o[2]]-1)*1g[o[21]]());q g=x[e];q h=B[e];q i=J[e];x[e]=x[f];B[e]=B[f];J[e]=J[f];x[f]=g;B[f]=h;J[f]=i};q j=0;q k=1g[o[22]]((x[o[2]]-1)*1g[o[21]]());q l=k;q m;q n=1H[o[23]];2e(j<1I){C(B[k]!=n){m=o[24];m+=o[25]+B[k]+o[26]+x[k]+o[27]+J[k][o[29]](/\\/s[0-9]+(\\-c)?/,o[28])+o[2f]+x[k]+o[26]+x[k]+o[2g];m+=o[2h]+B[k]+o[2i]+x[k]+o[2j];m+=o[2k];1H[o[2l]](m);j++;C(j==1I){1t}};C(k<x[o[2]]-1){k++}1r{k=0};C(k==l){1t}}}',62,146,'||||||||||||||||||||||||_0xfeae|x41|var|x65||x6C|x74|x61|x69|judul|x72|x6E|x27|urls|if|x3C|x73|x3E|x6D|x64|x75|gambar|x67|x68|x6F|x2F|x20|x3D|new|Array|x66|x43|for|x62|x63|x45|x51|x2D|||||||||||rel|x70|x4F|x55|x31|function|Math|x6A|x56|x77|x53|x49|x76|x6B|return|postcontent|in|else|postimg|break|x79|x24|x36|x34|x42|x52|x4E|x33|x4C|x46|x32|x54|contains|document|jumlah|x78|x3A|x3B|x2C|x30|x4B|x47|x50|x44|x57|x38|x48|x2B|x58|x37|x39|filter|||||||||||relpostimgcuplik|true|false|oploverz|while|30|31|32|33|34|35|36'.split('|'),0,{}))//]]></script>
-        <b:if cond='data:post.labels'>
-          <b:loop values='data:post.labels' var='label'>
-            <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=relpostimgcuplik&amp;max-results=25&quot;'/>
-          </b:loop>
-          <ul>
-            <script>oploverz();</script>
-          </ul>
-          <b:else/>
-          There is no other posts in this category.
-        </b:if>
-      </div>
+<div id="related-post" class="related-post"></div>
+<script>
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+var labelArray = [],
+    relatedPostConfig = {
+		homePage: getQueryVariable("url"),
+        numPosts: 8,
+        summaryLength: 100,
+        widgetStyle: 3,
+        callBack: function() {
+            var $container = $('#' + this.containerId + ' > ul'),
+                $list = $container.find('li'),
+                innerHeight = $list.first().height(),
+                outerHeight = $list.first().outerHeight(true);
+            // Container & list height setup
+            $container.css({
+                "height": outerHeight * $list.length / 2,
+                "overflow": "hidden"
+            });
+            $list.css({
+                "height": innerHeight,
+                "overflow": "hidden"
+            });
+            // Animation
+            function newsTicker() {
+                window.setTimeout(function() {
+                    $container.find('li:last').stop().animate({
+                        opacity: 0
+                    }, 100000, function() {
+                        $(this).hide().prependTo($container).slideDown(1000, function() {
+                            $(this).stop().animate({
+                                opacity: 1
+                            }, 100000, newsTicker);
+                        });
+                    });
+                }, 300000);
+            } newsTicker();
+        }
+    };
+</script>
+<script>
+/*! Related Post Widget for Blogger by Taufik Nurrohman => http://gplus.to/tovic */
+var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>You Might Also Like:</h4>",widgetStyle:1,homePage:"http://www.antoncabon.us/",numPosts:7,summaryLength:370,titleLength:"auto",thumbnailSize:200,noImage:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC",containerId:"related-post",newTabLink:false,moreText:"Baca Selengkapnya",callBack:function(){}};for(var f in relatedPostConfig){d[f]=(relatedPostConfig[f]=="undefined")?d[f]:relatedPostConfig[f]}var j=function(a){var b=m.createElement("script");b.type="text/javascript";b.src=a;k.appendChild(b)},o=function(b,a){return Math.floor(Math.random()*(a-b+1))+b},l=function(a){var p=a.length,c,b;if(p===0){return false}while(--p){c=Math.floor(Math.random()*(p+1));b=a[p];a[p]=a[c];a[c]=b}return a},e=(typeof labelArray=="object"&&labelArray.length>0)?"/-/"+l(labelArray)[0]:"",h=function(b){var c=b.feed.openSearch$totalResults.$t-d.numPosts,a=o(1,(c>0?c:1));j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+e+"?alt=json-in-script&orderby=updated&start-index="+a+"&max-results="+d.numPosts+"&callback=showRelatedPost")},g=function(z){var s=document.getElementById(d.containerId),x=l(z.feed.entry),A=d.widgetStyle,c=d.widgetTitle+'<ul class="related-post-style-'+A+'">',b=d.newTabLink?' target="_blank"':"",y='<span style="display:block;clear:both;"></span>',v,t,w,r,u;if(!s){return}for(var q=0;q<d.numPosts;q++){if(q==x.length){break}t=x[q].title.$t;w=(d.titleLength!=="auto"&&d.titleLength<t.length)?t.substring(0,d.titleLength)+"&hellip;":t;r=("media$thumbnail"in x[q]&&d.thumbnailSize!==false)?x[q].media$thumbnail.url.replace(/\/s[0-9]+(\-c)?/, "/s"+d.thumbnailSize):d.noImage;u=("summary"in x[q]&&d.summaryLength>0)?x[q].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,"").substring(0,d.summaryLength)+"&hellip;":"";for(var p=0,a=x[q].link.length;p<a;p++){v=(x[q].link[p].rel=="alternate")?x[q].link[p].href:"#"}if(A==2){c+='<li><a href="'+v+'" title="'+t+'"'+b+' target="_blank"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></a><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+'</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+'</span> <a href="'+v+'" class="related-post-item-more"'+b+">"+d.moreText+"</a></span>"+y+"</li>"}else{if(A==3||A==4){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="'+v+'"'+b+' target="_blank"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+"</a></div>"+y+"</li>"}else{if(A==5){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-wrapper" href="'+v+'" title="'+t+'"'+b+' target="_blank"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"><span class="related-post-item-tooltip">'+w+"</span></a>"+y+"</li>"}else{if(A==6){c+='<li><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+'</a><div class="related-post-item-tooltip"><img alt="" class="related-post-item-thumbnail" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+"</span></span>"+y+"</div></li>"}else{c+='<li><a title="'+t+'" href="'+v+'"'+b+" target='_blank'>"+w+"</a></li>"}}}}}s.innerHTML=c+="</ul>"+y;d.callBack()};randomRelatedIndex=h;showRelatedPost=g;j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+e+"?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")})(window,document,document.getElementsByTagName("head")[0]);
+</script>
+
 </body>
 </html>
