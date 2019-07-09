@@ -178,16 +178,16 @@ var randomRelatedIndex, showRelatedPost;
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
                 if (A == 2) {
-                    c += '<li><a href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '" width="' + d.thumbnailSize + '" height="' + d.thumbnailSize + '"></a><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + '</span> <a href="' + v + '" class="related-post-item-more"' + b + ">" + d.moreText + "</a></span>" + y + "</li>"
+                    c += '<li><a href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '"></a><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + '</span> <a href="' + v + '" class="related-post-item-more"' + b + ">" + d.moreText + "</a></span>" + y + "</li>"
                 } else {
                     if (A == 3 || A == 4) {
-                        c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="' + v + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '" width="' + d.thumbnailSize + '" height="' + d.thumbnailSize + '"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a></div>" + y + "</li>"
+                        c += '<li tabindex="0"><a class="related-post-item-title" href="' + v + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a></div>" + y + "</li>"
                     } else {
                         if (A == 5) {
-                            c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-wrapper" href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '" width="' + d.thumbnailSize + '" height="' + d.thumbnailSize + '"><span class="related-post-item-tooltip">' + w + "</span></a>" + y + "</li>"
+                            c += '<li tabindex="0"><a class="related-post-item-wrapper" href="' + v + '" title="' + t + '"' + b + ' target="_blank"><img alt="" class="related-post-item-thumbnail" src="' + r + '"><span class="related-post-item-tooltip">' + w + "</span></a>" + y + "</li>"
                         } else {
                             if (A == 6) {
-                                c += '<li><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><div class="related-post-item-tooltip"><img alt="" class="related-post-item-thumbnail" src="' + r + '" width="' + d.thumbnailSize + '" height="' + d.thumbnailSize + '"><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + "</span></span>" + y + "</div></li>"
+                                c += '<li><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + '</a><div class="related-post-item-tooltip"><img alt="" class="related-post-item-thumbnail" src="' + r + '"><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + "</span></span>" + y + "</div></li>"
                             } else {
                                 c += '<li><a title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a></li>"
                             }
